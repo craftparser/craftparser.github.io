@@ -2,7 +2,7 @@
 
 1. Базовая конфигурация
  - [x] astro.config.mjs с site (базовый URL)
- - [ ] Интеграции: @astrojs/sitemap, @astrojs/mdx (если нужны MDX), @astrojs/rss (если нужен RSS)
+ - [ ] Интеграции: @astrojs/sitemap, @astrojs/mdx (если нужны MDX)
  - [x] package.json с корректными скриптами (dev, build, preview)
 
 2. Мета-теги (BaseHead.astro)
@@ -13,7 +13,6 @@
  - [ ] <meta name="title" content={title}>
  - [ ] <link rel="canonical" href={canonicalURL}>
  - [ ] <link rel="sitemap" href="/sitemap-index.xml">
- - [ ] <link rel="alternate" type="application/rss+xml"> (если есть RSS)
  - [ ] Open Graph: og:title, og:description, og:url, og:type, og:image
  - [ ] <meta name="generator" content={Astro.generator}>
  - [ ] Верификация поисковиков (Yandex, Google) — при необходимости
@@ -38,7 +37,6 @@
 
 6. Технические файлы
  - [ ] robots.txt (API route в src/pages/robots.txt.ts)
- - [ ] rss.xml (если нужен RSS)
  - [ ] favicon.ico в public/
  - [ ] Файлы верификации (Yandex, Google) в public/
 
@@ -87,5 +85,3 @@
  - [ ] Сгенерировать билд (npm run build)
  - [ ] Проверить наличие dist/sitemap-index.xml
  - [ ] Проверить корректность canonical URL
- - [ ] Протестировать RSS-ленту (если есть)
-
