@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@plugin '@tailwindcss/typography';
+
+body {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.prose img {
+    margin-left: auto;
+    margin-right: auto;
+}
