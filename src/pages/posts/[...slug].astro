@@ -1,11 +1,9 @@
 ---
-import BaseHead from '../../components/BaseHead.astro';
-import Footer   from '../../components/Footer.astro';
-import Header   from '../../components/Header.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { POSTS_TITLE, POSTS_DESCR, POSTS_H1 } from '../../consts';
 
 import { getCollection, render } from 'astro:content';
-const post = Astro.props;
-const { Content } = await render(post);
+const { Content } = await render(Astro.props);
 
 export async function getStaticPaths() {
     const posts = await getCollection('posts');
@@ -16,12 +14,6 @@ export async function getStaticPaths() {
 }
 ---
 
-<!doctype html>
-<html lang="ru">
-	<head>
-    </head>
-	<body class="bg-gray-800 text-gray-100">
-        <h1>Post<h1/>
-	</body>
-</html>
-
+<BaseLayout title={POSTS_TITLE} description={POSTS_DESCR}>
+    <h1>{POSTS_H1}</h1>
+</BaseLayout>
