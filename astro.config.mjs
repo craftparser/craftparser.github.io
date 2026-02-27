@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 import pagefind from 'astro-pagefind';
 
 export default defineConfig({
-    site: 'https://craftparse.github.io',
+    site: 'https://craftparser.github.io',
     integrations: [mdx(), sitemap(), pagefind()],
 
     vite: {
