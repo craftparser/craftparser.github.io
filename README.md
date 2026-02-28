@@ -26,7 +26,7 @@
 4. Страницы
  - [x] Главная (index.astro) с уникальным h1
  - [x] Динамические роуты для постов (/posts/[...slug].astro)
- - [ ] Страница поиска (/search.astro) — опционально
+ - [x] Страница поиска (/search.astro) — опционально
 
 5. JSON-LD (структурированные данные)
  - [ ] BreadcrumbList для навигации
@@ -34,26 +34,25 @@
  - [ ] <script type="application/ld+json"> в <head>
 
 6. Технические файлы
- - [ ] robots.txt (API route в src/pages/robots.txt.ts)
- - [ ] favicon.ico в public/
+ - [x] robots.txt (API route в src/pages/robots.txt.ts)
+ - [x] favicon.ico в public/
  - [ ] Файлы верификации (Yandex, Google) в public/
 
 7. Компоненты
- - [ ] BaseHead.astro — общие мета-теги
- - [ ] Header.astro — навигация
- - [ ] Footer.astro — подвал с ссылками
- - [ ] ListPosts.astro — список постов — опционально
+ - [x] BaseHead.astro — общие мета-теги
+ - [x] Header.astro — навигация
+ - [x] Footer.astro — подвал с ссылками
  - [ ] Metrika.astro — счётчики аналитики — опционально
 
 8. Константы (src/consts.ts)
- - [ ] SITE_NAME, SITE_TITLE, SITE_DESCRIPTION
- - [ ] AUTHOR_NAME
- - [ ] Ссылки: LINK_DOCS, LINK_CONTACTS, TELEGRAM_CHANNEL
- - [ ] HOME_H1, DOCS_H1 — заголовки страниц
+ - [x] SITE_NAME, SITE_TITLE, SITE_DESCRIPTION
+ - [x] AUTHOR_NAME
+ - [x] Ссылки: LINK_DOCS, LINK_CONTACTS, TELEGRAM_CHANNEL
+ - [x] HOME_H1, DOCS_H1 — заголовки страниц
 
 9. Изображения и ресурсы
  - [ ] public/res/ — изображения, логотипы
- - [ ] public/fonts/ — шрифты
+ - [x] public/fonts/ — шрифты
  - [ ] Оптимизация изображений через astro:assets (<Image />)
  - [ ] loading="lazy" для изображений ниже первого экрана
 
