@@ -6,15 +6,16 @@ import Header   from "../components/Header.astro";
 interface Props {
 	title: string;
 	description: string;
+    og_image: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, og_image } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="ru">
 	<head>
-        <BaseHead title={title} description={description} />
+        <BaseHead title={title} description={description} og_image={og_image} />
 	</head>
 	<body class="bg-gray-800">
         <Header />

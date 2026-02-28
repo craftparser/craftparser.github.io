@@ -4,10 +4,10 @@ import CtaSection from "../components/landing/CtaSection.astro";
 import FeaturesSection from "../components/landing/FeaturesSection.astro";
 import HeroSection from "../components/landing/HeroSection.astro";
 import PricingSection from "../components/landing/PricingSection.astro";
-import { INDEX_TITLE, INDEX_DESCR, ACTION_LINK } from "../consts";
+import { INDEX_TITLE, INDEX_DESCR, INDEX_OG_IMAGE, ACTION_LINK } from "../consts";
 ---
 
-<BaseLayout title={INDEX_TITLE} description={INDEX_DESCR}>
+<BaseLayout title={INDEX_TITLE} description={INDEX_DESCR} og_image={INDEX_OG_IMAGE}>
     <HeroSection
         data={{
             id: "hero",

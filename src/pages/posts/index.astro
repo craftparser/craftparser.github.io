@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import PostCard from "../../components/PostCard.astro";
-import { POSTS_TITLE, POSTS_DESCR, POSTS_H1 } from "../../consts";
+import { POSTS_TITLE, POSTS_DESCR, POSTS_OG_IMAGE, POSTS_H1 } from "../../consts";
 import { getCollection } from "astro:content";
 
 const posts = (await getCollection("posts")).sort(
@@ -9,7 +9,7 @@ const posts = (await getCollection("posts")).sort(
 );
 ---
 
-<BaseLayout title={POSTS_TITLE} description={POSTS_DESCR}>
+<BaseLayout title={POSTS_TITLE} description={POSTS_DESCR} og_image={POSTS_OG_IMAGE}>
     <main class="container mx-auto px-4 py-12 max-w-5xl">
         <h1 class="mb-12 text-4xl font-bold text-gray-100 text-center">{POSTS_H1}</h1>
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
