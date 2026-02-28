@@ -21,11 +21,11 @@ const ld_json = [{
 
 <BaseLayout title={POSTS_TITLE} description={POSTS_DESCR} og_image={POSTS_OG_IMAGE} ld_json={JSON.stringify(ld_json)}>
     <main class="container mx-auto px-4 py-12">
-        <h1 class="mb-6 text-4xl font-bold text-gray-100 text-center">{POSTS_H1}</h1>
         <Breadcrumbs items={[
             { label: "Главная", href: "/" },
             { label: "Все посты" },
         ]} />
+        <h1 class="mb-6 text-4xl font-bold text-gray-100 text-center">{POSTS_H1}</h1>
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {posts.map((post) => (<PostCard post={post}/>))}
         </div>
