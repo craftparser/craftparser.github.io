@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+import { POSTS_TITLE, POSTS_DESCR, POSTS_H1 } from '../../consts';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('posts')).sort(
+	(a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()
+);
+---
+
+<BaseLayout title={POSTS_TITLE} description={POSTS_DESCR}>
+    <main class="container mx-auto px-4 py-12 max-w-5xl">
+        <header class="mb-12">
+            <h1 class="text-4xl font-bold text-gray-100">{POSTS_H1}</h1>
+            <p class="mt-3 text-lg text-gray-400">
+                {posts.length} {posts.length === 1 ? 'пост' : posts.length < 5 ? 'поста' : 'постов'}
+            </p>
+        </header>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {posts.map((post) => (<PostCard post={post}/>))}
+        </div>
+    </main>
+</BaseLayout>
