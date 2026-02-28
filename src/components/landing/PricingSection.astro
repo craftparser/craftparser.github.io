@@ -1,0 +1,37 @@
+---
+const { data } = Astro.props;
+---
+
+<section id={data.id} class="py-20 bg-gray-900">
+    <div class="max-w-screen-xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-white">{data.title}</h2>
+            <p class="mt-4 text-gray-400 max-w-2xl mx-auto">{data.description}</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {data.pricing.map((plan) => (
+                <div class={`relative p-8 rounded-2xl border ${plan.highlighted ? 'bg-gray-800 border-blue-500 shadow-xl shadow-blue-500/10' : 'bg-gray-800/50 border-gray-700'} flex flex-col`}>
+                    {plan.highlighted && (
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-blue-600 text-white text-sm font-semibold rounded-full">{data.top}</div>
+                    )}
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold text-white">{plan.name}</h3>
+                        <p class="text-gray-400 mt-2">{plan.description}</p>
+                        <div class="mt-4 text-3xl font-bold text-blue-400">{plan.price}</div>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-1">
+                        {plan.features.map((feature) => (
+                            <li class="flex items-start gap-3 text-gray-300">
+                                <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>{feature}</span>
+                            </li>
+                        ))}
+                    </ul>
+                    <a href="#contact" class={`w-full py-3 px-6 text-center font-semibold rounded-lg transition-colors ${plan.highlighted ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}>{data.action}</a>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
