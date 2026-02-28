@@ -16,7 +16,7 @@ export async function getStaticPaths() {
 const { Content } = await render(Astro.props);
 const { data } = Astro.props;
 
-const json_ld = [{
+const ld_json = [{
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -28,7 +28,7 @@ const json_ld = [{
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": data.title,
-    "image": [ INDEX_OG_IMAGE ],
+    "image": [ new URL(INDEX_OG_IMAGE, Astro.site) ],
     "datePublished": data.pubDate.toISOString(),
     "author": [{
         "@type": "Person",
