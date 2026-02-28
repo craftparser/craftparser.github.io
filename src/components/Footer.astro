@@ -1,0 +1,23 @@
+---
+import { SITE_NAME, HEADER_NAV } from "../consts";
+
+const styles = {
+    container: [
+        "max-w-screen-xl mx-auto p-10",
+        "flex flex-col gap-4 lg:flex-row lg:gap-0",
+        "items-center justify-between",
+        "text-center",
+    ].join(" "),
+};
+---
+
+<footer class="bg-gray-900 text-gray-100" style="font-weight:800">
+    <div class={styles.container}>
+        <a class="hover:text-gray-300" href="/">{SITE_NAME}</a>
+        <nav class="flex gap-8 items-center text-sm">
+            { HEADER_NAV.map((link) => (
+                <a class="hover:text-gray-300" href={link.href}>{link.label}</a>
+            )) }
+        </nav>
+    </div>
+</footer>
