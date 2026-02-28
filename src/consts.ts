@@ -1,4 +1,5 @@
-export const SITE_NAME = "Craft Parser";
+export const SITE_NAME   = "Craft Parser";
+export const ACTION_LINK = "https://t.me/craftparser"
 
 export const INDEX_TITLE = "Заказать парсинг данных — Craft Parser: сбор информации с сайтов";
 export const INDEX_DESCR = "Профессиональный парсинг данных на заказ. Собираем информацию любой сложности: товары интернет-магазинов, цены, контакты и аналитику в удобном формате (Excel, JSON, CSV).";
@@ -8,6 +9,6 @@ export const POSTS_DESCR = "Читайте экспертные статьи о 
 export const POSTS_H1    = "Блог о парсинге и анализе данных";
 
 export const HEADER_NAV = [
-    {label: "Все посты", href: "/posts/"},
-    // {label: "Test3", href: "#test3", select: true},
+    {label: "Все посты",    href: "/posts/"},
+    {label: "Написать нам", href: ACTION_LINK, select: true},
 ];

@@ -4,7 +4,7 @@ import CtaSection from "../components/landing/CtaSection.astro";
 import FeaturesSection from "../components/landing/FeaturesSection.astro";
 import HeroSection from "../components/landing/HeroSection.astro";
 import PricingSection from "../components/landing/PricingSection.astro";
-import { INDEX_TITLE, INDEX_DESCR } from "../consts";
+import { INDEX_TITLE, INDEX_DESCR, ACTION_LINK } from "../consts";
 ---
 
 <BaseLayout title={INDEX_TITLE} description={INDEX_DESCR}>
@@ -16,7 +16,7 @@ import { INDEX_TITLE, INDEX_DESCR } from "../consts";
             description: "Быстро соберем данные с Wildberries, Яндекс Карт, поисковиков и соцсетей. Вы получаете готовый результат в Excel без необходимости разбираться в софте и прокси.",
             label_1: "Рассчитать стоимость",
             label_2: "Узнать подробнее",
-            href_1: "#contact",
+            href_1: ACTION_LINK,
             href_2: "#features",
         }}
     />
@@ -85,7 +85,7 @@ import { INDEX_TITLE, INDEX_DESCR } from "../consts";
             ],
             top: "Популярный",
             action: "Заказать расчет",
-            href: "#contact",
+            href: ACTION_LINK,
         }}
     />
 
@@ -95,7 +95,7 @@ import { INDEX_TITLE, INDEX_DESCR } from "../consts";
             title: "Нужны данные уже завтра?",
             description: "Просто пришлите ссылку на сайт и список нужных полей. Мы проведем тестовый сбор нескольких строк бесплатно, чтобы вы оценили качество.",
             action: "Написать в Telegram",
-            href: "https://t.me/craftparser",
+            href: ACTION_LINK,
         }}
     />
 </BaseLayout>
