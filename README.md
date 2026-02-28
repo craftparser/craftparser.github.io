@@ -2,11 +2,6 @@
 
  - [ ] Верификация поисковиков (Yandex, Google) — при необходимости
 
-5. JSON-LD (структурированные данные)
- - [ ] BreadcrumbList для навигации
- - [ ] Article для постов (с headline, image, datePublished, author)
- - [ ] <script type="application/ld+json"> в <head>
-
 6. Технические файлы
  - [ ] Файлы верификации (Yandex, Google) в public/
 
@@ -25,4 +20,3 @@
 
 13. Аналитика
  - [ ] Яндекс.Метрика / Google Analytics
- - [ ] Код счётчиков в отдельном компоненте (Metrika.astro)
