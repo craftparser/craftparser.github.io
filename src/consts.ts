@@ -11,8 +11,8 @@ export const POSTS_OG_IMAGE = "/imgs/og-posts.webp";
 export const POSTS_H1       = "Блог о парсинге и анализе данных";
 
 export const POST_ACT_TITLE = "Нужны данные, но не знаете с чего начать?";
-export const POST_ACT_SUB   = "Пришлите ссылку, и мы подготовим бесплатный тестовый файл с вашими собранными данными для оценки качества.";
-export const POST_ACT_BTN   = "Отправить в телеграм";
+export const POST_ACT_SUB   = "Пришлите ссылку, и мы бесплатно спарсим первые 100 строк для вашего проекта, чтобы вы оценили качество.";
+export const POST_ACT_BTN   = "Написать телеграм";
 
 export const HEADER_NAV = [
     {label: "Все посты",    href: "/posts/"},
