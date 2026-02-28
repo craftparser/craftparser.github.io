@@ -1,32 +1,7 @@
 # 📋 Чеклист для сайта
 
-1. Базовая конфигурация
- - [x] astro.config.mjs с site (базовый URL)
- - [x] Интеграции: @astrojs/sitemap, @astrojs/mdx (если нужны MDX)
- - [x] package.json с корректными скриптами (dev, build, preview)
-
-2. Мета-теги (BaseHead.astro)
- - [x] <meta charset="utf-8">
- - [x] <meta name="viewport">
- - [x] <title>{title}</title>
- - [x] <meta name="description" content={description}>
- - [x] <meta name="title" content={title}>
- - [x] <link rel="canonical" href={canonicalURL}>
- - [x] <link rel="sitemap" href="/sitemap-index.xml">
  - [ ] Open Graph: og:title, og:description, og:url, og:type, og:image
- - [x] <meta name="generator" content={Astro.generator}>
  - [ ] Верификация поисковиков (Yandex, Google) — при необходимости
- - [x] <meta name="robots" content="..."> — при необходимости
-
-3. Структура контента
- - [x] src/content.config.ts с коллекциями (posts, docs и т.д.)
- - [x] Схема для каждой коллекции (title, description, pubDate, heroImage, tags и др.)
- - [x] Контент в src/content/{collection}/
-
-4. Страницы
- - [x] Главная (index.astro) с уникальным h1
- - [x] Динамические роуты для постов (/posts/[...slug].astro)
- - [x] Страница поиска (/search.astro) — опционально
 
 5. JSON-LD (структурированные данные)
  - [ ] BreadcrumbList для навигации
@@ -34,25 +9,13 @@
  - [ ] <script type="application/ld+json"> в <head>
 
 6. Технические файлы
- - [x] robots.txt (API route в src/pages/robots.txt.ts)
- - [x] favicon.ico в public/
  - [ ] Файлы верификации (Yandex, Google) в public/
 
 7. Компоненты
- - [x] BaseHead.astro — общие мета-теги
- - [x] Header.astro — навигация
- - [x] Footer.astro — подвал с ссылками
  - [ ] Metrika.astro — счётчики аналитики — опционально
-
-8. Константы (src/consts.ts)
- - [x] SITE_NAME, SITE_TITLE, SITE_DESCRIPTION
- - [x] AUTHOR_NAME
- - [x] Ссылки: LINK_DOCS, LINK_CONTACTS, TELEGRAM_CHANNEL
- - [x] HOME_H1, DOCS_H1 — заголовки страниц
 
 9. Изображения и ресурсы
  - [ ] public/res/ — изображения, логотипы
- - [x] public/fonts/ — шрифты
  - [ ] Оптимизация изображений через astro:assets (<Image />)
  - [ ] loading="lazy" для изображений ниже первого экрана
 
