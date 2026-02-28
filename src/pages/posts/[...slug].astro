@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
 import Telegram from "../../assets/Telegram.svg";
 import { SITE_NAME, INDEX_OG_IMAGE, POST_ACT_TITLE, POST_ACT_SUB, POST_ACT_BTN, ACTION_LINK } from "../../consts";
 import { formatDate } from "../../func";
@@ -20,8 +21,8 @@ const ld_json = [{
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": Astro.site },
-        { "@type": "ListItem", "position": 2, "name": "Posts", "item": new URL("/posts/", Astro.site)},
+        { "@type": "ListItem", "position": 1, "name": "Главная", "item": Astro.site },
+        { "@type": "ListItem", "position": 2, "name": "Все посты", "item": new URL("/posts/", Astro.site)},
         { "@type": "ListItem", "position": 3, "name": data.title }
     ]
 },{
@@ -40,7 +41,12 @@ const ld_json = [{
 
 <BaseLayout title={data.title} description={data.description} og_image={INDEX_OG_IMAGE} ld_json={JSON.stringify(ld_json)}>
     <article class="container mx-auto px-4 py-12 max-w-3xl">
-        <div class="mb-12 bg-gray-700 p-4 rounded-xl">
+        <Breadcrumbs items={[
+            { label: "Главная", href: "/" },
+            { label: "Все посты", href: "/posts/" },
+            { label: data.title },
+        ]} />
+        <div class="mb-6 bg-gray-700 p-4 rounded-xl">
             <div class="text-gray-400 text-sm">{formatDate(data.pubDate)}</div>
             <div class="text-gray-100 text-3xl mt-3 font-bold">{data.title}</div>
             <div class="text-gray-300 text-lg mt-3">{data.description}</div>
@@ -48,7 +54,7 @@ const ld_json = [{
         <div class="prose prose-invert prose-lg max-w-none">
             <Content />
         </div>
-        <div class="mt-12 bg-gradient-to-r from-blue-900 to-purple-900 p-8 rounded-xl text-center">
+        <div class="mt-6 bg-gradient-to-r from-blue-900 to-purple-900 p-8 rounded-xl text-center">
             <div class="text-gray-100 text-2xl font-bold">{POST_ACT_TITLE}</div>
             <div class="text-blue-200 text-lg mt-3 mb-5">{POST_ACT_SUB}</div>
             <a class="text-white inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 font-bold rounded-lg transition-colors" href={ACTION_LINK}>
