@@ -1,9 +1,9 @@
 ---
-import type { CollectionEntry } from 'astro:content';
-import { formatDate } from '../func';
+import type { CollectionEntry } from "astro:content";
+import { formatDate } from "../func";
 
 interface Props {
-    post: CollectionEntry<'posts'>;
+    post: CollectionEntry<"posts">;
 }
 
 const { post } = Astro.props;

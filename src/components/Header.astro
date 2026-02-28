@@ -1,0 +1,29 @@
+---
+import { SITE_NAME, HEADER_NAV } from "../consts";
+
+const logo = "/imgs/logo-100.webp";
+const styles = {
+    container: [
+        "max-w-screen-xl mx-auto px-10 py-5",
+        "flex flex-col gap-4 lg:flex-row lg:gap-0",
+        "items-center justify-between",
+        "text-center",
+    ].join(" "),
+};
+---
+
+<header class="bg-gray-900 text-gray-100" style="font-weight:800;">
+    <div class={styles.container}>
+        <a class="flex items-center gap-4 hover:text-gray-300 text-2xl" href="/">
+            <img class="h-10" src={logo} alt="Logo" />
+            <span>{SITE_NAME}</span>
+        </a>
+        <nav class="flex gap-8 items-center uppercase text-sm">
+            { HEADER_NAV.map((link) => (
+                link.select ?
+                <a class="hover:text-blue-500 text-blue-400" href={link.href}>{link.label}</a> :
+                <a class="hover:text-gray-300" href={link.href}>{link.label}</a>
+            )) }
+        </nav>
+    </div>
+</header>
