@@ -7,9 +7,18 @@ import { getCollection } from "astro:content";
 const posts = (await getCollection("posts")).sort(
 	(a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()
 );
+
+const ld_json = [{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": Astro.site },
+        { "@type": "ListItem", "position": 2, "name": "Posts" }
+    ]
+}];
 ---
 
-<BaseLayout title={POSTS_TITLE} description={POSTS_DESCR} og_image={POSTS_OG_IMAGE}>
+<BaseLayout title={POSTS_TITLE} description={POSTS_DESCR} og_image={POSTS_OG_IMAGE} ld_json={JSON.stringify(ld_json)}>
     <main class="container mx-auto px-4 py-12 max-w-5xl">
         <h1 class="mb-12 text-4xl font-bold text-gray-100 text-center">{POSTS_H1}</h1>
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

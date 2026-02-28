@@ -5,9 +5,17 @@ import FeaturesSection from "../components/landing/FeaturesSection.astro";
 import HeroSection from "../components/landing/HeroSection.astro";
 import PricingSection from "../components/landing/PricingSection.astro";
 import { INDEX_TITLE, INDEX_DESCR, INDEX_OG_IMAGE, ACTION_LINK } from "../consts";
+
+const ld_json = [{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home" },
+    ]
+}];
 ---
 
-<BaseLayout title={INDEX_TITLE} description={INDEX_DESCR} og_image={INDEX_OG_IMAGE}>
+<BaseLayout title={INDEX_TITLE} description={INDEX_DESCR} og_image={INDEX_OG_IMAGE} ld_json={JSON.stringify(ld_json)}>
     <HeroSection
         data={{
             id: "hero",
