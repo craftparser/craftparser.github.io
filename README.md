@@ -2,32 +2,30 @@
 
 1. Базовая конфигурация
  - [x] astro.config.mjs с site (базовый URL)
- - [ ] Интеграции: @astrojs/sitemap, @astrojs/mdx (если нужны MDX)
+ - [x] Интеграции: @astrojs/sitemap, @astrojs/mdx (если нужны MDX)
  - [x] package.json с корректными скриптами (dev, build, preview)
 
 2. Мета-теги (BaseHead.astro)
- - [ ] <meta charset="utf-8">
- - [ ] <meta name="viewport">
- - [ ] <title>{title}</title>
- - [ ] <meta name="description" content={description}>
- - [ ] <meta name="title" content={title}>
- - [ ] <link rel="canonical" href={canonicalURL}>
- - [ ] <link rel="sitemap" href="/sitemap-index.xml">
+ - [x] <meta charset="utf-8">
+ - [x] <meta name="viewport">
+ - [x] <title>{title}</title>
+ - [x] <meta name="description" content={description}>
+ - [x] <meta name="title" content={title}>
+ - [x] <link rel="canonical" href={canonicalURL}>
+ - [x] <link rel="sitemap" href="/sitemap-index.xml">
  - [ ] Open Graph: og:title, og:description, og:url, og:type, og:image
- - [ ] <meta name="generator" content={Astro.generator}>
+ - [x] <meta name="generator" content={Astro.generator}>
  - [ ] Верификация поисковиков (Yandex, Google) — при необходимости
- - [ ] <meta name="robots" content="..."> — при необходимости
+ - [x] <meta name="robots" content="..."> — при необходимости
 
 3. Структура контента
  - [x] src/content.config.ts с коллекциями (posts, docs и т.д.)
  - [x] Схема для каждой коллекции (title, description, pubDate, heroImage, tags и др.)
- - [ ] Контент в src/content/{collection}/
+ - [x] Контент в src/content/{collection}/
 
 4. Страницы
- - [ ] Главная (index.astro) с уникальным h1
- - [ ] Динамические роуты для постов (/posts/[...slug].astro)
- - [ ] Динамические роуты для документов (/docs/[...slug].astro)
- - [ ] Страница контактов (/contacts.astro)
+ - [x] Главная (index.astro) с уникальным h1
+ - [x] Динамические роуты для постов (/posts/[...slug].astro)
  - [ ] Страница поиска (/search.astro) — опционально
 
 5. JSON-LD (структурированные данные)

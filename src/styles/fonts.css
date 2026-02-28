@@ -1,16 +1,16 @@
 /* Nunito variable fonts cover the whole wght axis */
 @font-face {
-  font-family: 'Nunito';
+  font-family: "Nunito";
   font-style: normal;
   font-weight: 200 1000;
   font-display: swap;
-  src: url('/fonts/Nunito/Nunito-VariableFont_wght.ttf') format('truetype-variations');
+  src: url("/fonts/Nunito/Nunito-VariableFont_wght.ttf") format("truetype-variations");
 }
 
 @font-face {
-  font-family: 'Nunito';
+  font-family: "Nunito";
   font-style: italic;
   font-weight: 200 1000;
   font-display: swap;
-  src: url('/fonts/Nunito/Nunito-Italic-VariableFont_wght.ttf') format('truetype-variations');
+  src: url("/fonts/Nunito/Nunito-Italic-VariableFont_wght.ttf") format("truetype-variations");
 }
