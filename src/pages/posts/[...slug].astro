@@ -49,14 +49,14 @@ const ld_json = [{
         <div class="mb-6 bg-gray-700 p-4 rounded-xl">
             <div class="text-gray-400 text-sm">{formatDate(data.pubDate)}</div>
             <div class="text-gray-100 text-3xl mt-3 font-bold">{data.title}</div>
-            <div class="text-gray-300 text-lg mt-3">{data.description}</div>
+            <div class="text-gray-300 lg:text-lg mt-3">{data.description}</div>
         </div>
-        <div class="prose prose-invert prose-lg max-w-none">
+        <div class="prose prose-invert lg:prose-lg max-w-none">
             <Content />
         </div>
         <div class="mt-6 bg-gradient-to-r from-blue-900 to-purple-900 p-8 rounded-xl text-center">
             <div class="text-gray-100 text-2xl font-bold">{POST_ACT_TITLE}</div>
-            <div class="text-blue-200 text-lg mt-3 mb-5">{POST_ACT_SUB}</div>
+            <div class="text-blue-200 lg:text-lg mt-3 mb-5">{POST_ACT_SUB}</div>
             <a class="text-white inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 font-bold rounded-lg transition-colors" href={ACTION_LINK}>
                 <Telegram class="w-5 h-5" />
                 {POST_ACT_BTN}
